@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Yourself</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 400px; width: 100%"></div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+            title:{
+                text: "How Often Mari Listens to Sad Spanish Music in A Day"
+            },
+
+        axisX:{
+            title:"Time",
+            labelFontSize: 14, 
+            interval: 1
+        },
+
+        axisY:{
+            title:"Number of Songs",
+            labelFontSize: 14 
+        },
+    
+        data: [{
+        type: "column",
+        //to be changed to scatterplot eventually
+        dataPoints: [
+    
+
+        //if changed to a scatterplot, al data points are going to need to be added individually (ie x:1; y:1 then x:1; y:2 etc.)
+        { label: "12am", y: 0},
+        { label: "1am", y: 0 },
+        { label: "2am", y: 0 },
+        { label: "3am", y: 0 },
+        { label: "4am", y: 0 },
+        { label: "5am", y: 0 },
+        { label: "6am", y: 0 },
+        { label: "7am", y: 0 },
+        { label: "8am", y: 3 },
+        { label: "9am", y: 0 },
+        { label: "10am", y: 0 },
+        { label: "11am", y: 3 },
+        { label: "12pm", y: 2 },
+
+        
+        { label: "1pm", y: 0 },
+        { label: "2pm", y: 3 },
+        { label: "3pm", y: 15 },
+        { label: "4pm", y: 17 },
+        { label: "5pm", y: 0 },
+        { label: "6pm", y: 0 },
+        { label: "7pm", y: 0 },
+        { label: "8pm", y: 0 },
+        { label: "9pm", y: 0 },
+        { label: "10pm", y: 0 },
+        { label: "11pm", y: 0 },
+        
+        
+    
+        ]
+        }]
+    });
+    
+    //this is hashtag not aesthetic i can not lie guys 
+    chart.render();
+    };
+
+    </script>  
+</body>
+</html>
