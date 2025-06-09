@@ -1,4 +1,4 @@
- #background {
+    #background {
       position: fixed;
       top: 0;
       left: 0;
@@ -9,6 +9,12 @@
       background-repeat: no-repeat;
       transition: opacity 1s ease-in-out;
       z-index: -1;
+    }
+
+    .syne-mono-regular {
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
     }
 
     .controls {
@@ -22,17 +28,18 @@
 
     button {
       padding: 1rem 2rem;
-      font-size: 1rem;
+      font-family: 'Syne Mono';
+      font-size: 1.3rem;
       border: none;
       border-radius: 8px;
       background-color: rgba(0, 0, 0, 0.6);
-      color: white;
+      color: rgb(217, 217, 220);
       cursor: pointer;
       transition: background-color 0.3s;
     }
 
     button:hover {
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.878);
     }
 
 #overlayImage {
@@ -72,3 +79,4 @@
   gap: 1rem;
   z-index: 10; 
 }
+

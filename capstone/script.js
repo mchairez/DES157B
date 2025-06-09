@@ -1,3 +1,4 @@
+
 (function () {
   const backgrounds = [
     {
@@ -16,6 +17,7 @@
       audio: 'audio/cyber.mp3'
     }
   ];
+  
 
   let currentIndex = 0;
   const bgDiv = document.getElementById('background');
@@ -41,6 +43,7 @@
       bgDiv.style.opacity = 1;
     }, 400);
   }
+
 
  
   setBackground(currentIndex);
