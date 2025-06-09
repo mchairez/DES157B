@@ -1,0 +1,67 @@
+ #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity 1s ease-in-out;
+      z-index: -1;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+#overlayImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;       
+  height: 75vh;      
+  object-fit: contain; /* Maintain aspect ratio */
+  opacity: 0;
+  z-index: 5;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+#overlayImage.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Make sure controls are on top */
+.controls {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10; /* Higher z-index than overlay image */
+}
+
